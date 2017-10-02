@@ -19,6 +19,9 @@ This project will include:
 ### Wireframes
 My app will be a single page app with a next button once questions have been answered. The NavBar will include the logo and links to my LinkedIn and About page.
 
+[Link to Wireframes](https://flic.kr/s/aHsm5k1FCS)
+
+
 ### Architecture and Technologies
 
 This project will use the following technologies:
