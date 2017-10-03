@@ -11,6 +11,7 @@ class Question1 extends React.Component {
     this.handlePause = this.handlePause.bind(this);
     this.handlePlay = this.handlePlay.bind(this);
     this.update = this.update.bind(this);
+    this.handleButton = this.handleButton.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {play: true, numbers:[]};
   }
@@ -72,10 +73,16 @@ class Question1 extends React.Component {
     };
   }
 
-  handleSubmit(){
+  handleButton(){
     if (this.state.numbers.length >= 5) {
       document.getElementsByClassName('question-btn')[0].style.color = 'red';
+    }
+  }
 
+  handleSubmit(){
+    if (this.state.numbers.length >= 5) {
+      localStorage.setItem('set',this.state.numbers);
+      this.props.history.push("/Cardinality2");
     }
   }
 
@@ -84,31 +91,33 @@ class Question1 extends React.Component {
   render(){
     console.log(this.state.numbers.length);
     return(
-      <div className="wrap">
-        {this.state.play === true ?
-          <a className="playback-btn"
-            onClick={this.handlePause}>Pause</a> :
-          <a className="playback-btn"
-            onClick={this.handlePlay}>Play</a>}
+      <div>
+        <div className="wrap">
+          {this.state.play === true ?
+            <a className="playback-btn"
+              onClick={this.handlePause}>Pause</a> :
+            <a className="playback-btn"
+              onClick={this.handlePlay}>Play</a>}
 
-        <div ref={(el) => { this.el = el; }} className="intro">
+          <div ref={(el) => { this.el = el; }} className="intro">
+          </div>
         </div>
         <div className="num-form">
           <div>
             <input className= "num-form-li"
-              type="number" onChange={this.update()}/>
+            type="number" onChange={this.update()}/>
             <input className= "num-form-li"
-              type="number" onChange={this.update()}/>
+            type="number" onChange={this.update()}/>
             <input className= "num-form-li"
-              type="number" onChange={this.update()}/>
+            type="number" onChange={this.update()}/>
             <input className= "num-form-li"
-              type="number" onChange={this.update()}/>
+            type="number" onChange={this.update()}/>
             <input className= "num-form-li"
-              type="number" onChange={this.update()}/>
+            type="number" onChange={this.update()}/>
           </div>
-          <a className="question-btn">Click Me</a>
+          <a className="question-btn" onClick={this.handleSubmit}>Click Me</a>
         </div>
-        {this.handleSubmit()}
+        {this.handleButton()}
       </div>
     );
   }
