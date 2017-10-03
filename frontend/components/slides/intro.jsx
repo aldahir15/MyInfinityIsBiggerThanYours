@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 
-class Slide1 extends React.Component {
+class Intro extends React.Component {
   constructor(props){
     super(props);
     this.handleNext = this.handleNext.bind(this);
@@ -14,15 +14,16 @@ class Slide1 extends React.Component {
 
   componentDidMount() {
     const strings=[
-      'Welcome!',
-      'During this demo I will prove to you that my infinity is more infinite than your infinity',
-      'You might be asking, what do you even mean? Inifinity isn’t even measurable, how can you even prove that there is even anything larger than a concept of a never ending list of numbers?',
+      'Welcome! <br/> During this demo I will prove to you that my infinity is more infinite than your infinity',
+      'You might be asking, what do you even mean? <br/> Inifinity isn’t even measurable, how can you even prove that there is even anything larger than a concept of a never ending list of numbers?',
+      'I will explain some set theory concepts like^1000 <ul><li>cardinality</li> <li>one-to-one correspondance</li> <li>countable and uncountable sets</li> <li>Cantor’s Diagonal Theorem</li> </ul> ^1000 At the end you will have a demo so you can modify a set to really convince you that my infinity is much bigger than the common notion of an infinity stretching from negative infinity to positive infinity.'
     ];
     const options = {
       strings: strings,
       typeSpeed: 20,
       showCursor: false,
       backDelay: 1000,
+      onComplete: this.handleNext
     };
     this.typed = new Typed(this.el, options);
   }
@@ -33,7 +34,9 @@ class Slide1 extends React.Component {
 
 
   handleNext(){
-    this.props.history.push("/2");
+    setTimeout(() => {
+      this.props.history.push("/cardinality");
+    }, 2000);
   }
 
   handlePause(){
@@ -63,4 +66,4 @@ class Slide1 extends React.Component {
 
 }
 
-export default Slide1;
+export default Intro;

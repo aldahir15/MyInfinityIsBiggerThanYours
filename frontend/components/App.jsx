@@ -5,9 +5,9 @@ import { Route } from 'react-router-dom';
 
 import Nav from './nav/nav_bar';
 import Footer from './footer/footer';
-import Slide1 from './slides/slide1';
-import Slide2 from './slides/slide2';
-import Slide3 from './slides/slide3';
+import Intro from './slides/Intro';
+import Cardinality from './slides/cardinality';
+import Question1 from './slides/questions/question1';
 
 
 class Root extends React.Component {
@@ -16,9 +16,9 @@ class Root extends React.Component {
       <div>
         <Nav/>
         <Switch>
-          <Route exact path="/" component={Slide1} />
-          <Route exact path="/2" component={Slide2} />
-          <Route exact path="/3" component={Slide3} />
+          <Route exact path="/" component={Intro} />
+          <Route exact path="/cardinality" component={Cardinality} />
+          <Route exact path="/question1" component={Question1} />
         </Switch>
       </div>
     );
