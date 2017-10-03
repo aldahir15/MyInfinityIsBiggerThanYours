@@ -11,6 +11,7 @@ class Question1 extends React.Component {
     this.handlePause = this.handlePause.bind(this);
     this.handlePlay = this.handlePlay.bind(this);
     this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {play: true, numbers:[]};
   }
 
@@ -71,10 +72,17 @@ class Question1 extends React.Component {
     };
   }
 
+  handleSubmit(){
+    if (this.state.numbers.length >= 5) {
+      document.getElementsByClassName('question-btn')[0].style.color = 'red';
+
+    }
+  }
+
 
 
   render(){
-    console.log(this.state);
+    console.log(this.state.numbers.length);
     return(
       <div className="wrap">
         {this.state.play === true ?
@@ -98,8 +106,9 @@ class Question1 extends React.Component {
             <input className= "num-form-li"
               type="number" onChange={this.update()}/>
           </div>
-          <button>Click Me</button>
+          <a className="question-btn">Click Me</a>
         </div>
+        {this.handleSubmit()}
       </div>
     );
   }

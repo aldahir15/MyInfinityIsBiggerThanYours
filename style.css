@@ -85,9 +85,15 @@ h1 {
   flex-direction: column;
 }
 
-.num-form button {
+.question-btn {
+  color: black;
   margin-top: 20px;
-  width: 100px;
+  width: 150px;
+  font-size: 30px;
+}
+
+.question-btn:hover {
+  cursor: pointer;
 }
 
 .num-form-li{
