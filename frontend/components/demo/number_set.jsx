@@ -34,7 +34,7 @@ class Demo extends React.Component {
     return (
       <div className="demo-input-div">
         {this.state.inputs.map((input) =>
-          <div className="div-number"><p>0.</p><input type="number"
+          <div key={input} className="div-number"><p>0.</p><input type="number"
           step="any" placeholder="12345..." className={input} onKeyPress={this.handleEnter}></input></div>)}
       </div>
     );
