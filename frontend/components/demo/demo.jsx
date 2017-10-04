@@ -22,29 +22,53 @@ class Demo extends React.Component {
   }
 
   animate(){
-    const xaxis =
-    document.getElementsByClassName('circle-0')[0].style.color = 'white';
-    anime({
-      targets: '#circle-demo',
-      translateY: '-31.2rem',
-      translateX: '1.6rem',
-      scale: [.75, .9],
-      delay: function(el, index) {
-        return index * 80;
-      },
-      loop: false,
-      complete: () => {
-        let div = document.createElement("DIV");
-        let num = "";
-        for (var i = 0; i < this.state.numbers.length; i++) {
-          num += String(this.state.numbers[i])[i] || "0";
+    for (let i = 0; i < this.state.numbers.length; i++) {
+      const yaxis = (-30.9) + (3.3)*(i);
+      anime({
+        targets: `.circle-${i}`,
+        translateY: `${yaxis}rem`,
+        translateX: '5.6rem',
+        scale: [.75, .9],
+        delay: function(el, index) {
+          return index * 80;
+        },
+        loop: false,
+        complete: () => {
+          if (document.getElementsByClassName("resultNum")[0]) {
+            document.getElementsByClassName("wrap")[0].removeChild(document.getElementsByClassName("resultNum")[0]);
+            let div = document.createElement("DIV");
+            let num = "";
+            let finalnum = "";
+            for (var i = 0; i < this.state.numbers.length; i++) {
+              num += String(this.state.numbers[i])[i+2] || "0";
+            }
+            for (var i = 0; i < num.length; i++) {
+              finalnum += String(parseInt(num[i]) + 1)
+            }
+            let text = document.createTextNode(`0.${finalnum}`);
+            div.appendChild(text);
+            div.className = "resultNum";
+            document.getElementsByClassName("wrap")[0].appendChild(div);
+            document.getElementsByClassName(`${this.state.numbers.length}`)[0].value = parseInt(finalnum);
+          } else {
+            let div = document.createElement("DIV");
+            let num = "";
+            let finalnum = "";
+            for (var i = 0; i < this.state.numbers.length; i++) {
+              num += String(this.state.numbers[i])[i+2] || "0";
+            }
+            for (var i = 0; i < num.length; i++) {
+              finalnum += String(parseInt(num[i]) + 1)
+            }
+            let text = document.createTextNode(`0.${finalnum}`);
+            div.appendChild(text);
+            div.className = "resultNum";
+            document.getElementsByClassName("wrap")[0].appendChild(div);
+            document.getElementsByClassName(`${this.state.numbers.length}`)[0].value = parseInt(finalnum);
+          }
         }
-        let text = document.createTextNode(num);
-        console.log(num);
-        div.appendChild(text);
-        document.body.appendChild(div);
-      }
-    });
+      });
+    }
   }
 
   render() {
@@ -58,8 +82,10 @@ class Demo extends React.Component {
           <a onClick={this.handleNewNumber}>Find a New Number!</a>
         </div>
         <div className="demo-container"><NumberSet parent={this} /></div>
+        <div className="circle-container">
         {this.state.numbers.map((num) =>
           <div key={num} id="circle-demo" className={`circle-${this.state.numbers.indexOf(num)}`}></div>)}
+        </div>
       </div>
     );
   }

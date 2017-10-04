@@ -27,8 +27,8 @@ h1 {
 }
 
 .wrap{
-  padding-left: 5%;
-  padding-top: 5%;
+  text-align: -webkit-center;
+  padding-top: 10px;
 }
 
 .intro {
@@ -154,8 +154,9 @@ h1 {
 
 .demo-container {
   width: 90%;
-  height: 500px;
+  min-height: 500px;
   border: 1px solid white;
+  overflow-y: auto;
 }
 
 .demo-button-div {
@@ -180,7 +181,7 @@ h1 {
   height: 50px;
   font-size: 30px;
   border: 0;
-  letter-spacing: 7px;
+  letter-spacing: 21px;
   color: white;
 }
 
@@ -203,5 +204,14 @@ h1 {
   -moz-border-radius: 50px/50px;
   -webkit-border-radius: 50px 50px;
   border-radius: 50%;
-  border: solid 5px #f00;
+  border: solid 2px #f00;
+}
+
+.circle-container{
+  display: flex;
+}
+
+.resultNum {
+  text-align: center;
+  font-size: 70px;
 }
