@@ -7,7 +7,7 @@ class Demo extends React.Component {
   constructor(props){
     super(props);
     this.handleEnter = this.handleEnter.bind(this);
-    this.state = {inputs: ['input1']};
+    this.state = {inputs: [0]};
   }
 
   componentDidMount() {
@@ -15,12 +15,18 @@ class Demo extends React.Component {
 
   handleEnter(e) {
     if(e.key === 'Enter'){
+      const numbers = this.props.parent.state.numbers;
       const inputs = this.state.inputs;
-      inputs.push('input2');
+      if (numbers[e.target.className]) {
+        numbers[numbers.length - 1] = parseFloat(`0.${e.target.value}`);
+      } else {
+        numbers.push(parseFloat(`0.${e.target.value}`));
+      }
+      this.props.parent.setState({numbers: numbers});
+      if (numbers.length === inputs.length) {
+        inputs.push(inputs[inputs.length - 1] + 1);
+      }
       this.setState({inputs: inputs});
-      const numbers = this.props.parentState.numbers;
-      numbers.push(e.target.value);
-      this.props.parentSetState({numbers: numbers});
     }
   }
 
@@ -28,8 +34,8 @@ class Demo extends React.Component {
     return (
       <div className="demo-input-div">
         {this.state.inputs.map((input) =>
-          <input type="number"
-          step="any" placeholder="0.12345" onKeyPress={this.handleEnter}></input>)}
+          <div className="div-number"><p>0.</p><input type="number"
+          step="any" placeholder="12345..." className={input} onKeyPress={this.handleEnter}></input></div>)}
       </div>
     );
   }
