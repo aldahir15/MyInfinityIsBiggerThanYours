@@ -22,6 +22,9 @@ class Demo extends React.Component {
   }
 
   animate(){
+    for (var i = 0; i < this.state.numbers.length; i++) {
+      document.getElementsByClassName(`circle-${i}`)[0].style.borderColor = "red";
+    }
     for (let i = 0; i < this.state.numbers.length; i++) {
       const yaxis = (-30.9) + (3.3)*(i);
       anime({
@@ -49,7 +52,7 @@ class Demo extends React.Component {
             div.appendChild(text);
             div.className = "resultNum";
             document.getElementsByClassName("wrap")[0].appendChild(div);
-            document.getElementsByClassName(`${this.state.numbers.length}`)[0].value = parseInt(finalnum);
+            document.getElementById(`${this.state.numbers.length}`).value = parseInt(finalnum);
           } else {
             let div = document.createElement("DIV");
             let num = "";
@@ -64,24 +67,25 @@ class Demo extends React.Component {
             div.appendChild(text);
             div.className = "resultNum";
             document.getElementsByClassName("wrap")[0].appendChild(div);
-            document.getElementsByClassName(`${this.state.numbers.length}`)[0].value = parseInt(finalnum);
+            document.getElementById(`${this.state.numbers.length}`).value = parseInt(finalnum);
           }
         }
       });
     }
   }
 
+
   render() {
     return (
       <div className="wrap">
         <div className="demo-button-div">
-          <a className="">Random Set</a>
+          <a onClick={() => this.refs.child.handleRandom()}>Random Set</a>
           <div className="demo-divider"></div>
           <a>Reset</a>
           <div className="demo-divider"></div>
           <a onClick={this.handleNewNumber}>Find a New Number!</a>
         </div>
-        <div className="demo-container"><NumberSet parent={this} /></div>
+        <div className="demo-container"><NumberSet ref="child" parent={this} /></div>
         <div className="circle-container">
         {this.state.numbers.map((num) =>
           <div key={num} id="circle-demo" className={`circle-${this.state.numbers.indexOf(num)}`}></div>)}

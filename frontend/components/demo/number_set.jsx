@@ -7,6 +7,7 @@ class Demo extends React.Component {
   constructor(props){
     super(props);
     this.handleEnter = this.handleEnter.bind(this);
+    this.handleTab = this.handleTab.bind(this);
     this.state = {inputs: [0]};
   }
 
@@ -30,12 +31,36 @@ class Demo extends React.Component {
     }
   }
 
+  handleTab(){
+    // document.getElementById(String(this.state.inputs.length-2)).focus();
+  }
+
+  handleRandom(){
+    const SET = [0.1234567897, 0.863528176, 0.9876543210, 0.54273652342, 0.832742397821, 0.938742349872];
+    // this.setState({numbers: SET});
+    for (var i = 1; i < SET.length; i++) {
+      const inputs = this.state.inputs;
+      inputs.push(inputs[inputs.length - 1] + 1);
+      this.setState({inputs: inputs});
+    }
+    for (let j = 0; j < SET.length; j++) {
+      const arrInputs = document.getElementsByClassName("number-trial");
+      console.log(arrInputs[1]);
+      arrInputs[j].value = parseInt(String(SET[j]).slice(2));
+      let numbers = this.props.parent.state.numbers;
+      numbers.push(SET[j]);
+      this.props.parent.setState({numbers: numbers});
+    }
+  }
+
   render() {
     return (
       <div className="demo-input-div">
         {this.state.inputs.map((input) =>
           <div key={input} className="div-number"><p>0.</p><input type="number"
-          step="any" placeholder="12345..." className={input} onKeyPress={this.handleEnter}></input></div>)}
+          step="any" className="number-trial" placeholder="12345..." id={input} onKeyPress={this.handleEnter}>
+          </input></div>)}
+          {this.handleTab()}
       </div>
     );
   }
