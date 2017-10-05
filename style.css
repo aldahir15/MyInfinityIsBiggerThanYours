@@ -210,14 +210,20 @@ h1 {
   -moz-border-radius: 50px/50px;
   -webkit-border-radius: 50px 50px;
   border-radius: 50%;
-  border: solid 2px black;
+  border: solid 2px red;
 }
 
 .circle-container{
   display: flex;
+  flex-direction: column;
 }
 
 .resultNum {
   text-align: center;
   font-size: 50px;
+}
+
+.wrap-wrap {
+  display: flex;
+  flex-direction: row;
 }
