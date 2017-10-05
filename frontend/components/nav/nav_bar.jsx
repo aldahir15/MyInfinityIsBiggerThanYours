@@ -9,8 +9,8 @@ class Nav extends React.Component {
 
   render(){
     return(
-      <div>
-        <h1>MY INFINITY IS BIGGER THAN YOURS</h1>
+      <div className="header">
+        <Link to="/"><h1>MY INFINITY IS BIGGER THAN YOURS</h1></Link>
       </div>
     );
   }
