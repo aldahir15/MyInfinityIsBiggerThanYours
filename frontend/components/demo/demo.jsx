@@ -11,6 +11,7 @@ class Demo extends React.Component {
     this.render = this.render.bind(this);
     this.handleNewNumber = this.handleNewNumber.bind(this);
     this.animate = this.animate.bind(this);
+    this.handleReset = this.handleReset.bind(this);
     this.state = {play: true, numbers: []};
   }
 
@@ -74,6 +75,11 @@ class Demo extends React.Component {
     }
   }
 
+  handleReset(){
+    this.refs.child.startReset();
+    this.setState({numbers: []});
+  }
+
 
   render() {
     return (
@@ -81,7 +87,7 @@ class Demo extends React.Component {
         <div className="demo-button-div">
           <a onClick={() => this.refs.child.handleRandom()}>Random Set</a>
           <div className="demo-divider"></div>
-          <a>Reset</a>
+          <a onClick={this.handleReset}>Reset</a>
           <div className="demo-divider"></div>
           <a onClick={this.handleNewNumber}>Find a New Number!</a>
         </div>
