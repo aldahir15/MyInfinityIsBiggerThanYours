@@ -89,7 +89,6 @@ class Question1 extends React.Component {
 
 
   render(){
-    console.log(this.state.numbers.length);
     return(
       <div>
         <div className="wrap">

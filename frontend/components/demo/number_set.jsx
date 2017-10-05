@@ -92,11 +92,9 @@ class Demo extends React.Component {
         document.getElementsByClassName("demo-input-div")[0].appendChild(div);
       }
     }
-    console.log(this.props.parent.state);
   }
 
   render() {
-    console.log(document.getElementsByClassName("number-trial"));
     return (
       <div className="demo-input-div">
         {this.state.inputs.map((input) =>

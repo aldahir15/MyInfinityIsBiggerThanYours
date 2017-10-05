@@ -227,4 +227,22 @@ h1 {
 .wrap-wrap {
   display: flex;
   flex-direction: row;
+  padding-top: 20px;
+}
+
+.p-wrap{
+  font-size: 75%;
+  width: 50%;
+  display: flex;
+  text-align: left;
+  float: right;
+  position: relative;
+  top: -85px;
+  right: 5px;
+  border: 1px solid;
+}
+
+.first-wrap{
+  /*display: flex;
+  flex-direction: column;*/
 }

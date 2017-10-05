@@ -84,6 +84,10 @@ class Demo extends React.Component {
 
   render() {
     return (
+      <div className="first-wrap">
+      <p className="p-wrap">INSTRUCTIONS: Start by inputting in a number and pressing enter to make more, when you want to find a new
+        number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you're feeling
+        lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".</p>
       <div className="wrap-wrap">
         <div className="wrap">
           <div className="demo-button-div">
@@ -91,7 +95,7 @@ class Demo extends React.Component {
             <div className="demo-divider"></div>
             <a onClick={this.handleReset}>Reset</a>
             <div className="demo-divider"></div>
-            <a onClick={this.handleNewNumber}>Find a New Number!</a>
+            <a id="new-num" onClick={this.handleNewNumber}>Find a New Number!</a>
           </div>
           <div className="demo-container"><NumberSet ref="child" parent={this} /></div>
         </div>
@@ -99,6 +103,7 @@ class Demo extends React.Component {
         {this.state.numbers.map((num) =>
           <div key={num} id="circle-demo" className={`circle-${this.state.numbers.indexOf(num)}`}></div>)}
           </div>
+      </div>
       </div>
     );
   }
