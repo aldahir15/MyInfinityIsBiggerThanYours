@@ -10,7 +10,7 @@ class Demo extends React.Component {
     this.handleTab = this.handleTab.bind(this);
     this.startReset = this.startReset.bind(this);
     this.newInput = this.newInput.bind(this);
-    this.state = {inputs: [0]};
+    this.state = {inputs: [0], fakeinputs: []};
   }
 
   componentDidMount() {
@@ -26,10 +26,12 @@ class Demo extends React.Component {
         numbers.push(parseFloat(`0.${e.target.value}`));
       }
       this.props.parent.setState({numbers: numbers});
-      if (numbers.length === inputs.length) {
+      let fakeinputs = this.state.fakeinputs;
+      if (numbers.length === inputs.length || numbers.length === fakeinputs.length) {
         inputs.push(inputs[inputs.length - 1] + 1);
+        fakeinputs.push(fakeinputs[fakeinputs.length - 1] + 1);
       }
-      this.setState({inputs: inputs});
+      this.setState({inputs: inputs, fakeinputs: fakeinputs});
     }
   }
 
@@ -54,6 +56,9 @@ class Demo extends React.Component {
     this.setState({inputs: []});
     for (var i = 0; i < SET.length + 1; i++) {
       if (i === SET.length) {
+        let fakeinputs = this.state.fakeinputs;
+        fakeinputs.push(i);
+        this.setState({fakeinputs: fakeinputs});
         let div = document.createElement("DIV");
         div.className = "div-number";
         let input = document.createElement("INPUT");
@@ -61,11 +66,15 @@ class Demo extends React.Component {
         input.id = i;
         let put = document.createElement("P");
         let text = document.createTextNode(`0.`);
+        input.onkeypress = this.handleEnter;
         put.appendChild(text);
         div.appendChild(put);
         div.appendChild(input);
         document.getElementsByClassName("demo-input-div")[0].appendChild(div);
       } else {
+        let fakeinputs = this.state.fakeinputs;
+        fakeinputs.push(i);
+        this.setState({fakeinputs: fakeinputs});
         let parentNums = this.props.parent.state.numbers;
         parentNums.push(SET[i]);
         this.props.parent.setState({numbers: parentNums});
