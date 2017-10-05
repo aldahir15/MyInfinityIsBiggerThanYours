@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import anime from 'animejs';
 
-class Cardinality3 extends React.Component {
+class Cardinality4 extends React.Component {
   constructor(props){
     super(props);
     this.handleNext = this.handleNext.bind(this);
@@ -16,7 +16,7 @@ class Cardinality3 extends React.Component {
 
   componentDidMount() {
     const strings=[
-      'Since we can’t count in a reasonable (or even  an unreasonable) amount of time the amount of elements in an infinite set, we say that the cardinality of the set of all positive integers is ℵ0.'
+      'Another concept that we can define is countability, <br/> how we can think about how we would count the numbers in a set. Let’s take for example a set of five numbers, from 1 to 5, a 5 year old would count how many elements are in this set by using their fingers, its very obvious that you are able to go one by one and keep track of the increasing tally. '
     ];
     const options = {
       strings: strings,
@@ -64,7 +64,7 @@ class Cardinality3 extends React.Component {
   }
 
   handleSubmit(){
-    this.props.history.push("/cardinality4");
+    this.props.history.push("/sdfjkhsdfjh");
   }
 
   render(){
@@ -82,7 +82,7 @@ class Cardinality3 extends React.Component {
           </div>
         </div>
         <div>
-          <div className="num-card">{`ℵ0 = |{1,2,3,4,5,6,7,8,9,10,11…}|`}</div>
+          <div className="num-card">{`5 = |{1,2,3,4,5}|`}</div>
           <a className="next-btn" onClick={this.handleSubmit}>Next</a>
         </div>
       </div>
@@ -90,4 +90,4 @@ class Cardinality3 extends React.Component {
   }
 }
 
-export default Cardinality3;
+export default Cardinality4;

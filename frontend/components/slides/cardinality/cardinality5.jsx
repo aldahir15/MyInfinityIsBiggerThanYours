@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import anime from 'animejs';
 
-class Cardinality3 extends React.Component {
+class Cardinality5 extends React.Component {
   constructor(props){
     super(props);
     this.handleNext = this.handleNext.bind(this);
@@ -16,7 +16,7 @@ class Cardinality3 extends React.Component {
 
   componentDidMount() {
     const strings=[
-      'Since we can’t count in a reasonable (or even  an unreasonable) amount of time the amount of elements in an infinite set, we say that the cardinality of the set of all positive integers is ℵ0.'
+      'We can be even define this more technically by saying that any countable set is either a subset of natural numbers or the set of natural numbers, meaning that it exists within the set of all Natural numbers or it is it, which is the set of positive integers but now including negative infinity to -1 and 0.'
     ];
     const options = {
       strings: strings,
@@ -64,7 +64,7 @@ class Cardinality3 extends React.Component {
   }
 
   handleSubmit(){
-    this.props.history.push("/cardinality4");
+    this.props.history.push("/sdfjkhsdfjh");
   }
 
   render(){
@@ -82,7 +82,7 @@ class Cardinality3 extends React.Component {
           </div>
         </div>
         <div>
-          <div className="num-card">{`ℵ0 = |{1,2,3,4,5,6,7,8,9,10,11…}|`}</div>
+          <div className="num-card">{`Z = {…,-5,-4,-3,-2,-1,0,1,2,3,4,5,…}`}</div>
           <a className="next-btn" onClick={this.handleSubmit}>Next</a>
         </div>
       </div>
@@ -90,4 +90,4 @@ class Cardinality3 extends React.Component {
   }
 }
 
-export default Cardinality3;
+export default Cardinality5;

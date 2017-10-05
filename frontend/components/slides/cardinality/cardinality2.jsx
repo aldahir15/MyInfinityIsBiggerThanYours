@@ -16,7 +16,7 @@ class Cardinality2 extends React.Component {
 
   componentDidMount() {
     const strings=[
-      'Cardinality is the size of your set, meaning how many elements belong to a particular set. <br/> We use vertical lines containing the set to signify the cardinality.'
+      'Cardinality is the size of your set, meaning how many elements belong to a particular set. <br/> We use vertical lines containing the set to signify cardinality.'
     ];
     const options = {
       strings: strings,

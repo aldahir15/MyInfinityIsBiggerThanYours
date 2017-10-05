@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import anime from 'animejs';
 
-class Cardinality3 extends React.Component {
+class Cardinality6 extends React.Component {
   constructor(props){
     super(props);
     this.handleNext = this.handleNext.bind(this);
@@ -16,7 +16,7 @@ class Cardinality3 extends React.Component {
 
   componentDidMount() {
     const strings=[
-      'Since we can’t count in a reasonable (or even  an unreasonable) amount of time the amount of elements in an infinite set, we say that the cardinality of the set of all positive integers is ℵ0.'
+      'Obviously we can try to count all the numbers until infinity, but that would be a waste, the only thing that matters is that we know that we could try and not that we dont have the time available to. '
     ];
     const options = {
       strings: strings,
@@ -32,7 +32,7 @@ class Cardinality3 extends React.Component {
     document.getElementsByClassName('num-card')[0].style.color = 'white';
     anime({
       targets: '.num-card',
-      translateY: '7rem',
+      translateY: '2rem',
       scale: [.75, .9],
       delay: function(el, index) {
         return index * 80;
@@ -64,7 +64,7 @@ class Cardinality3 extends React.Component {
   }
 
   handleSubmit(){
-    this.props.history.push("/cardinality4");
+    this.props.history.push("/sdfjkhsdfjh");
   }
 
   render(){
@@ -81,8 +81,26 @@ class Cardinality3 extends React.Component {
           <div ref={(el) => { this.el = el; }} className="intro">
           </div>
         </div>
-        <div>
-          <div className="num-card">{`ℵ0 = |{1,2,3,4,5,6,7,8,9,10,11…}|`}</div>
+        <div className="wrap-count-lines">
+          <div className="num-card" id="lines-wrap">
+            {`Countability: {0,1,2,3,4,5,6,7,8,9,10,…}`}
+            <div className="lines">
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+              <svg width="70" height="100"><line x1="0" y1="0" x2="60" y2="350" stroke="white"/></svg>
+
+            </div>
+            {'1,2,3,4,5,6,7,8,9,10,11'}
+          </div>
           <a className="next-btn" onClick={this.handleSubmit}>Next</a>
         </div>
       </div>
@@ -90,4 +108,4 @@ class Cardinality3 extends React.Component {
   }
 }
 
-export default Cardinality3;
+export default Cardinality6;
