@@ -27,8 +27,8 @@ h1 {
 }
 
 .wrap{
-  width: 1200px;
-  text-align: -webkit-center;
+  width: 1040px;
+  padding-left: 59px;
   padding-top: 10px;
 }
 
@@ -154,10 +154,11 @@ h1 {
 }
 
 .demo-container {
-  width: 90%;
+  width: 1040px;
   min-height: 500px;
   border: 1px solid white;
   overflow-y: auto;
+  margin-right: 0;
 }
 
 .demo-button-div {
@@ -210,7 +211,7 @@ h1 {
   -moz-border-radius: 50px/50px;
   -webkit-border-radius: 50px 50px;
   border-radius: 50%;
-  border: solid 2px red;
+  border: solid 2px black;
 }
 
 .circle-container{

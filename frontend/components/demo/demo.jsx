@@ -27,7 +27,7 @@ class Demo extends React.Component {
       document.getElementsByClassName(`circle-${i}`)[0].style.borderColor = "red";
     }
     for (let i = 0; i < this.state.numbers.length; i++) {
-      const xaxis = (-68.2) + (2.4)*(i);
+      const xaxis = (-63.2) + (2.4)*(i);
       const yaxis = (3.1) + (0.9)*(i);
       anime({
         targets: `.circle-${i}`,
