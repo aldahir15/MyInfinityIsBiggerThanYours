@@ -64,7 +64,7 @@ class Cardinality5 extends React.Component {
   }
 
   handleSubmit(){
-    this.props.history.push("/sdfjkhsdfjh");
+    this.props.history.push("/cardinality6");
   }
 
   render(){
