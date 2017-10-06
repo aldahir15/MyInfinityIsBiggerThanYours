@@ -45897,6 +45897,7 @@ var Cardinality = function (_React$Component) {
     _this.handleNext = _this.handleNext.bind(_this);
     _this.handlePause = _this.handlePause.bind(_this);
     _this.handlePlay = _this.handlePlay.bind(_this);
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
     _this.state = { play: true };
     return _this;
   }
@@ -45951,6 +45952,11 @@ var Cardinality = function (_React$Component) {
       this.setState({ play: true });
     }
   }, {
+    key: 'handleSubmit',
+    value: function handleSubmit() {
+      this.props.history.push("/cardinality2");
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -45976,6 +45982,11 @@ var Cardinality = function (_React$Component) {
           'div',
           { className: 'zed' },
           "ℤ+={1,2,3,4,5,6,7,...}"
+        ),
+        _react2.default.createElement(
+          'a',
+          { className: 'next-btn', onClick: this.handleSubmit },
+          'Next'
         )
       );
     }

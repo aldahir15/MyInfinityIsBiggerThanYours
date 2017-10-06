@@ -10,6 +10,7 @@ class Cardinality extends React.Component {
     this.handleNext = this.handleNext.bind(this);
     this.handlePause = this.handlePause.bind(this);
     this.handlePlay = this.handlePlay.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {play: true};
   }
 
@@ -59,6 +60,9 @@ class Cardinality extends React.Component {
     this.setState({play: true});
   }
 
+  handleSubmit(){
+    this.props.history.push("/cardinality2");
+  }
 
 
   render(){
@@ -73,6 +77,7 @@ class Cardinality extends React.Component {
         <div ref={(el) => { this.el = el; }} className="intro">
         </div>
         <div className="zed">{"ℤ+={1,2,3,4,5,6,7,...}"}</div>
+                  <a className="next-btn" onClick={this.handleSubmit}>Next</a>
       </div>
     );
   }
