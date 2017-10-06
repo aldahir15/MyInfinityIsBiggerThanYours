@@ -48192,6 +48192,7 @@ var Cardinality9 = function (_React$Component) {
           'div',
           { className: 'wrap-count-lines2' },
           _react2.default.createElement('img', { className: 'second-img', src: 'http://res.cloudinary.com/ddgt25kwb/image/upload/c_scale,w_552/v1507310401/set10_e7u4ct.png' }),
+          _react2.default.createElement('img', { className: 'second-img', src: 'http://res.cloudinary.com/ddgt25kwb/image/upload/c_scale,w_312/v1507310399/transform10_huaavy.png' }),
           _react2.default.createElement(
             'a',
             { className: 'next-btn', onClick: this.handleSubmit },
