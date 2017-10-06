@@ -16,6 +16,8 @@ import Cardinality5 from './slides/cardinality/cardinality5';
 import Cardinality6 from './slides/cardinality/cardinality6';
 import Cardinality7 from './slides/cardinality/cardinality7';
 import Cardinality8 from './slides/cardinality/cardinality8';
+import Cardinality9 from './slides/cardinality/cardinality9';
+import Cardinality10 from './slides/cardinality/cardinality10';
 
 import Demo from './demo/demo';
 
@@ -38,6 +40,9 @@ class Root extends React.Component {
           <Route exact path="/cardinality6" component={Cardinality6} />
           <Route exact path="/cardinality7" component={Cardinality7} />
           <Route exact path="/cardinality8" component={Cardinality8} />
+          <Route exact path="/cardinality9" component={Cardinality9} />
+          <Route exact path="/cardinality10" component={Cardinality10} />
+
           <Route exact path="/demo" component={Demo} />
 
 

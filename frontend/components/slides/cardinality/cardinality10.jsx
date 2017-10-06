@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import anime from 'animejs';
 
-class Cardinality8 extends React.Component {
+class Cardinality9 extends React.Component {
   constructor(props){
     super(props);
     this.handleNext = this.handleNext.bind(this);
@@ -16,7 +16,7 @@ class Cardinality8 extends React.Component {
 
   componentDidMount() {
     const strings=[
-      'How does this tie in with inifinity? Well lets think about the concept of countable sets again, in order for a set to be countable it actually has to have a one-to-one correspondance to some subset of natural numbers, so because of this definition, 2 times infinity actually has the same cardinality as infinity since for every number in the set of infinity*2 there is a unique number in inifinity that can be mapped onto it. This is possible because inifnity + n (any number) is still within inifinity.'
+      'Think about this for a second, how would we count all the decimals from 0 to 1? We wouldn’t be able to, there are an infinite amount of numbers between 0 and 1 if we count fractions. This is where Cantor comes to explain all this mess, his Diagonal Argument essentially states that if we were going to write down all of the numbers from 0 to 1, we can always use the diagonals of each number and transform that new number which wil always be a new addition to the numbers from 0 to 1.'
     ];
     const options = {
       strings: strings,
@@ -65,7 +65,7 @@ class Cardinality8 extends React.Component {
   }
 
   handleSubmit(){
-    this.props.history.push("/cardinality9");
+    this.props.history.push("/sdfjkhsdfjh");
   }
 
   render(){
@@ -83,7 +83,7 @@ class Cardinality8 extends React.Component {
           </div>
         </div>
         <div className="wrap-count-lines2">
-          <img className="first-img" src="http://res.cloudinary.com/ddgt25kwb/image/upload/c_scale,w_775/v1507260082/fdjhgksfd_mr2avx.png"/>
+        <img className="second-img" src="http://res.cloudinary.com/ddgt25kwb/image/upload/c_scale,w_552/v1507310401/set10_e7u4ct.png"/>
           <a className="next-btn" onClick={this.handleSubmit}>Next</a>
         </div>
       </div>
@@ -91,4 +91,4 @@ class Cardinality8 extends React.Component {
   }
 }
 
-export default Cardinality8;
+export default Cardinality9;

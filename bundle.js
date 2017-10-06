@@ -42401,6 +42401,14 @@ var _cardinality15 = __webpack_require__(125);
 
 var _cardinality16 = _interopRequireDefault(_cardinality15);
 
+var _cardinality17 = __webpack_require__(126);
+
+var _cardinality18 = _interopRequireDefault(_cardinality17);
+
+var _cardinality19 = __webpack_require__(127);
+
+var _cardinality20 = _interopRequireDefault(_cardinality19);
+
 var _demo = __webpack_require__(119);
 
 var _demo2 = _interopRequireDefault(_demo);
@@ -42443,6 +42451,8 @@ var Root = function (_React$Component) {
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/cardinality6', component: _cardinality12.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/cardinality7', component: _cardinality14.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/cardinality8', component: _cardinality16.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/cardinality9', component: _cardinality18.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/cardinality10', component: _cardinality20.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/demo', component: _demo2.default })
         )
       );
@@ -47831,7 +47841,7 @@ var Cardinality8 = function (_React$Component) {
   }, {
     key: 'handleSubmit',
     value: function handleSubmit() {
-      this.props.history.push("/sdfjkhsdfjh");
+      this.props.history.push("/cardinality9");
     }
   }, {
     key: 'render',
@@ -47878,6 +47888,324 @@ var Cardinality8 = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Cardinality8;
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(7);
+
+var _reactDom = __webpack_require__(9);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactTypist = __webpack_require__(44);
+
+var _reactTypist2 = _interopRequireDefault(_reactTypist);
+
+var _animejs = __webpack_require__(111);
+
+var _animejs2 = _interopRequireDefault(_animejs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Cardinality9 = function (_React$Component) {
+  _inherits(Cardinality9, _React$Component);
+
+  function Cardinality9(props) {
+    _classCallCheck(this, Cardinality9);
+
+    var _this = _possibleConstructorReturn(this, (Cardinality9.__proto__ || Object.getPrototypeOf(Cardinality9)).call(this, props));
+
+    _this.handleNext = _this.handleNext.bind(_this);
+    _this.handlePause = _this.handlePause.bind(_this);
+    _this.handlePlay = _this.handlePlay.bind(_this);
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
+    _this.state = { play: true };
+    return _this;
+  }
+
+  _createClass(Cardinality9, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var strings = ['At this point, you might be wondering, if infinity times 2 is the same size as infinity, then any addition, multiplication, powering actually doesnt change the cardinality of infinity, and you’re right, it doesn’t. Instead we have to think about different sets, uncountable sets. <br/> A set is uncountable if we can’t make a one-to-one correspondance with the set of Natural numbers. Well how do we create an uncountable set? Glad you asked. Think about fractions and decimals, we need a very large set, the set of all Real numbers, ℝ. The set of Real numbers rational (5) and irrational numbers (pi) stretching from negative infinity to positive infinity.'];
+      var options = {
+        strings: strings,
+        typeSpeed: 20,
+        showCursor: false,
+        backDelay: 1000,
+        onComplete: this.animate
+      };
+      this.typed = new Typed(this.el, options);
+    }
+  }, {
+    key: 'animate',
+    value: function animate() {
+      document.getElementsByClassName('first-img')[0].style.display = 'flex';
+      document.getElementsByClassName('num-card')[0].style.color = 'white';
+      (0, _animejs2.default)({
+        targets: '.num-card',
+        translateY: '2rem',
+        scale: [.75, .9],
+        delay: function delay(el, index) {
+          return index * 80;
+        },
+        loop: false,
+        complete: function complete() {
+          document.getElementsByClassName('next-btn')[0].style.color = 'white';
+        }
+      });
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.typed.destroy();
+    }
+  }, {
+    key: 'handleNext',
+    value: function handleNext() {
+      this.props.history.push("/2");
+    }
+  }, {
+    key: 'handlePause',
+    value: function handlePause() {
+      this.typed.stop();
+      this.setState({ play: false });
+    }
+  }, {
+    key: 'handlePlay',
+    value: function handlePlay() {
+      this.typed.start();
+      this.setState({ play: true });
+    }
+  }, {
+    key: 'handleSubmit',
+    value: function handleSubmit() {
+      this.props.history.push("/sdfjkhsdfjh");
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var nums = localStorage.getItem("set");
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'wrap' },
+          this.state.play === true ? _react2.default.createElement(
+            'a',
+            { className: 'playback-btn',
+              onClick: this.handlePause },
+            'Pause'
+          ) : _react2.default.createElement(
+            'a',
+            { className: 'playback-btn',
+              onClick: this.handlePlay },
+            'Play'
+          ),
+          _react2.default.createElement('div', { ref: function ref(el) {
+              _this2.el = el;
+            }, className: 'intro' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'wrap-count-lines2' },
+          _react2.default.createElement('img', { className: 'first-img', src: 'http://res.cloudinary.com/ddgt25kwb/image/upload/c_scale,w_750/v1507309856/real_gnxpm8.jpg' }),
+          _react2.default.createElement(
+            'a',
+            { className: 'next-btn', onClick: this.handleSubmit },
+            'Next'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Cardinality9;
+}(_react2.default.Component);
+
+exports.default = Cardinality9;
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(7);
+
+var _reactDom = __webpack_require__(9);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactTypist = __webpack_require__(44);
+
+var _reactTypist2 = _interopRequireDefault(_reactTypist);
+
+var _animejs = __webpack_require__(111);
+
+var _animejs2 = _interopRequireDefault(_animejs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Cardinality9 = function (_React$Component) {
+  _inherits(Cardinality9, _React$Component);
+
+  function Cardinality9(props) {
+    _classCallCheck(this, Cardinality9);
+
+    var _this = _possibleConstructorReturn(this, (Cardinality9.__proto__ || Object.getPrototypeOf(Cardinality9)).call(this, props));
+
+    _this.handleNext = _this.handleNext.bind(_this);
+    _this.handlePause = _this.handlePause.bind(_this);
+    _this.handlePlay = _this.handlePlay.bind(_this);
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
+    _this.state = { play: true };
+    return _this;
+  }
+
+  _createClass(Cardinality9, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var strings = ['Think about this for a second, how would we count all the decimals from 0 to 1? We wouldn’t be able to, there are an infinite amount of numbers between 0 and 1 if we count fractions. This is where Cantor comes to explain all this mess, his Diagonal Argument essentially states that if we were going to write down all of the numbers from 0 to 1, we can always use the diagonals of each number and transform that new number which wil always be a new addition to the numbers from 0 to 1.'];
+      var options = {
+        strings: strings,
+        typeSpeed: 20,
+        showCursor: false,
+        backDelay: 1000,
+        onComplete: this.animate
+      };
+      this.typed = new Typed(this.el, options);
+    }
+  }, {
+    key: 'animate',
+    value: function animate() {
+      document.getElementsByClassName('first-img')[0].style.display = 'flex';
+      document.getElementsByClassName('num-card')[0].style.color = 'white';
+      (0, _animejs2.default)({
+        targets: '.num-card',
+        translateY: '2rem',
+        scale: [.75, .9],
+        delay: function delay(el, index) {
+          return index * 80;
+        },
+        loop: false,
+        complete: function complete() {
+          document.getElementsByClassName('next-btn')[0].style.color = 'white';
+        }
+      });
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.typed.destroy();
+    }
+  }, {
+    key: 'handleNext',
+    value: function handleNext() {
+      this.props.history.push("/2");
+    }
+  }, {
+    key: 'handlePause',
+    value: function handlePause() {
+      this.typed.stop();
+      this.setState({ play: false });
+    }
+  }, {
+    key: 'handlePlay',
+    value: function handlePlay() {
+      this.typed.start();
+      this.setState({ play: true });
+    }
+  }, {
+    key: 'handleSubmit',
+    value: function handleSubmit() {
+      this.props.history.push("/sdfjkhsdfjh");
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var nums = localStorage.getItem("set");
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'wrap' },
+          this.state.play === true ? _react2.default.createElement(
+            'a',
+            { className: 'playback-btn',
+              onClick: this.handlePause },
+            'Pause'
+          ) : _react2.default.createElement(
+            'a',
+            { className: 'playback-btn',
+              onClick: this.handlePlay },
+            'Play'
+          ),
+          _react2.default.createElement('div', { ref: function ref(el) {
+              _this2.el = el;
+            }, className: 'intro' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'wrap-count-lines2' },
+          _react2.default.createElement('img', { className: 'second-img', src: 'http://res.cloudinary.com/ddgt25kwb/image/upload/c_scale,w_552/v1507310401/set10_e7u4ct.png' }),
+          _react2.default.createElement(
+            'a',
+            { className: 'next-btn', onClick: this.handleSubmit },
+            'Next'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Cardinality9;
+}(_react2.default.Component);
+
+exports.default = Cardinality9;
 
 /***/ })
 /******/ ]);

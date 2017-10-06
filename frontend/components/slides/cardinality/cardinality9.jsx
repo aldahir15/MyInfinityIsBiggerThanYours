@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import anime from 'animejs';
 
-class Cardinality8 extends React.Component {
+class Cardinality9 extends React.Component {
   constructor(props){
     super(props);
     this.handleNext = this.handleNext.bind(this);
@@ -16,7 +16,7 @@ class Cardinality8 extends React.Component {
 
   componentDidMount() {
     const strings=[
-      'How does this tie in with inifinity? Well lets think about the concept of countable sets again, in order for a set to be countable it actually has to have a one-to-one correspondance to some subset of natural numbers, so because of this definition, 2 times infinity actually has the same cardinality as infinity since for every number in the set of infinity*2 there is a unique number in inifinity that can be mapped onto it. This is possible because inifnity + n (any number) is still within inifinity.'
+      'At this point, you might be wondering, if infinity times 2 is the same size as infinity, then any addition, multiplication, powering actually doesnt change the cardinality of infinity, and you’re right, it doesn’t. Instead we have to think about different sets, uncountable sets. <br/> A set is uncountable if we can’t make a one-to-one correspondance with the set of Natural numbers. Well how do we create an uncountable set? Glad you asked. Think about fractions and decimals, we need a very large set, the set of all Real numbers, ℝ. The set of Real numbers rational (5) and irrational numbers (pi) stretching from negative infinity to positive infinity.'
     ];
     const options = {
       strings: strings,
@@ -65,7 +65,7 @@ class Cardinality8 extends React.Component {
   }
 
   handleSubmit(){
-    this.props.history.push("/cardinality9");
+    this.props.history.push("/sdfjkhsdfjh");
   }
 
   render(){
@@ -83,7 +83,7 @@ class Cardinality8 extends React.Component {
           </div>
         </div>
         <div className="wrap-count-lines2">
-          <img className="first-img" src="http://res.cloudinary.com/ddgt25kwb/image/upload/c_scale,w_775/v1507260082/fdjhgksfd_mr2avx.png"/>
+          <img className="first-img" src="http://res.cloudinary.com/ddgt25kwb/image/upload/c_scale,w_750/v1507309856/real_gnxpm8.jpg"/>
           <a className="next-btn" onClick={this.handleSubmit}>Next</a>
         </div>
       </div>
@@ -91,4 +91,4 @@ class Cardinality8 extends React.Component {
   }
 }
 
-export default Cardinality8;
+export default Cardinality9;
