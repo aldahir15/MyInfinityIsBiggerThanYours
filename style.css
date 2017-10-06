@@ -33,7 +33,7 @@ h1 {
 }
 
 .intro {
-  font-size: 35px;
+  font-size: larger;
 }
 
 .playback-btn {
@@ -266,8 +266,52 @@ h1 {
   letter-spacing: 5px;
 }
 
+#lines-wrap2 {
+  text-align: left;
+  letter-spacing: 5px;
+  font-size: 35px;
+}
+
+line {
+  /*stroke: black !important;*/
+}
+
 .wrap-count-lines{
   width: 1040px;
   padding-left: 59px;
   padding-top: 10px;
+}
+
+.wrap-count-lines2{
+  width: 1040px;
+  padding-left: 59px;
+  padding-top: 10px;
+  text-align: -webkit-center;
+}
+
+.lines2 {
+  padding-left: 220px
+}
+
+.p-lines {
+  font-size: 20px;
+  width: 350px;
+  text-align: -webkit-left;
+  padding-left: 50px;
+  color: black;
+  font-family: LemonMilk;
+}
+
+.lets-wrap-this {
+  display: flex;
+  flex-direction: row;
+}
+
+.lines3{
+  display: flex;
+  padding-left: 200px
+}
+
+img {
+  display: none;
 }

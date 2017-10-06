@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import anime from 'animejs';
 
-class Cardinality6 extends React.Component {
+class Cardinality7 extends React.Component {
   constructor(props){
     super(props);
     this.handleNext = this.handleNext.bind(this);
@@ -16,7 +16,7 @@ class Cardinality6 extends React.Component {
 
   componentDidMount() {
     const strings=[
-      'Obviously we can try to count all the numbers until infinity, but that would be a waste, the only thing that matters is that we know that we could try and not that we dont have the time available to. '
+      'A way we can bypass having to count everything one by one is with the concept of a one-to-one correspondance, which pretty much is that a set will always have the same cardinality (number of elements) as another set if for each number there is a distinct one-to-one relation to a number in the other set. <br/> For example:'
     ];
     const options = {
       strings: strings,
@@ -30,6 +30,7 @@ class Cardinality6 extends React.Component {
 
   animate(){
     document.getElementsByClassName('num-card')[0].style.color = 'white';
+    document.getElementsByClassName('p-lines')[0].style.color = 'white';
     const doops = document.getElementsByClassName('doop');
     for (var i = 0; i < doops.length; i++) {
       document.getElementsByClassName('doop')[i].style.stroke = 'red';
@@ -86,25 +87,24 @@ class Cardinality6 extends React.Component {
           </div>
         </div>
         <div className="wrap-count-lines">
+        <div className="lets-wrap-this">
           <div className="num-card" id="lines-wrap">
-            {`Countability: {0,1,2,3,4,5,6,7,8,9,10,…}`}
-            <div className="lines">
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-              <svg width="70" height="100"><line className="doop" x1="0" y1="0" x2="60" y2="350" stroke="black"/></svg>
-
+            {`A = {1,2,3,4,5}`}
+            <div className="lines2">
+              <svg width="70" height="100"><line className="doop" x1="20" y1="350" x2="0" y2="0" stroke="black"/></svg>
+              <svg width="70" height="100"><line className="doop" x1="20" y1="350" x2="0" y2="0" stroke="black"/></svg>
+              <svg width="70" height="100"><line className="doop" x1="20" y1="350" x2="0" y2="0" stroke="black"/></svg>
+              <svg width="70" height="100"><line className="doop" x1="20" y1="350" x2="0" y2="0" stroke="black"/></svg>
+              <svg width="70" height="100"><line className="doop" x1="20" y1="350" x2="0" y2="0" stroke="black"/></svg>
 
             </div>
-            {'1,2,3,4,5,6,7,8,9,10,11'}
+            {'B = {8,7,2,5,9}'}
+            </div>
+            <p className="p-lines">
+              A and B have the same number of elemnts (same cardinality)
+              and we can see that for every number in A, there is a number
+              in B that we can map it to
+            </p>
           </div>
           <a className="next-btn" onClick={this.handleSubmit}>Next</a>
         </div>
@@ -113,4 +113,4 @@ class Cardinality6 extends React.Component {
   }
 }
 
-export default Cardinality6;
+export default Cardinality7;
