@@ -26,8 +26,13 @@ This application has a tutorial of some basic Set Theory concepts:
 
 This tutorial was made in order to visualize Cantor's Diagonal Argument.
 
+![Infinity](http://res.cloudinary.com/ddgt25kwb/image/upload/v1507308492/1_lubhym.png)
+
+
 ### Demo
-The Demo has three buttons, 
+The Demo has three buttons,
 - Random Set: Makes a random set for you to play with.
 - Reset: To clear the set.
 - Find a New Number: To create a new number based on the diagonal.
+
+![Infinity](http://res.cloudinary.com/ddgt25kwb/image/upload/v1507308720/2_vovxrb.png)
