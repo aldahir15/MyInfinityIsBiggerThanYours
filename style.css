@@ -347,3 +347,23 @@ img {
   display: flex;
   width: 95%;
 }
+
+.im-ready {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.im-ready button {
+  padding: 15px;
+  border: 10px;
+  border-radius: 10%;
+  background-color: rgb(71, 22, 22);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.im-ready button:hover {
+  color: rgb(175, 172, 172);
+}

@@ -47927,7 +47927,9 @@ var Demo = function (_React$Component) {
 
   _createClass(Demo, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      this.openModal();
+    }
   }, {
     key: 'handleNewNumber',
     value: function handleNewNumber() {
@@ -48110,6 +48112,15 @@ var Demo = function (_React$Component) {
                       'If you\'re feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER" to get a random set populated which you can modify and keep on adding onto.'
                     ),
                     _react2.default.createElement('img', { className: 'image-help', src: "https://thumbs.gfycat.com/UnevenSorrowfulClumber-size_restricted.gif" })
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'im-ready' },
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: this.closeModal },
+                    'I\'M READY!'
                   )
                 )
               )

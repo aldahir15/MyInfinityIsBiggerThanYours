@@ -37,6 +37,7 @@ class Demo extends React.Component {
   }
 
   componentDidMount() {
+    this.openModal();
   }
 
   handleNewNumber(){
@@ -150,6 +151,9 @@ class Demo extends React.Component {
                   <p>If you're feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER" to get a random set populated which you can modify and keep on adding onto.</p>
                   <img className="image-help" src={"https://thumbs.gfycat.com/UnevenSorrowfulClumber-size_restricted.gif"} />
                 </div>
+              </div>
+              <div className="im-ready">
+                <button onClick={this.closeModal}>I'M READY!</button>
               </div>
             </Modal>
           </div>
