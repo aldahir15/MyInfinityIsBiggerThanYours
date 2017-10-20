@@ -3,7 +3,21 @@ import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import NumberSet from './number_set';
-import anime from 'animejs';
+import anime from 'animejs'; 
+import Modal from 'react-modal';
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+    color                 : 'black',
+    width                 : '70%'
+  }
+};
 
 class Demo extends React.Component {
   constructor(props){
@@ -12,7 +26,14 @@ class Demo extends React.Component {
     this.handleNewNumber = this.handleNewNumber.bind(this);
     this.animate = this.animate.bind(this);
     this.handleReset = this.handleReset.bind(this);
-    this.state = {play: true, numbers: []};
+    this.state = { 
+      play: true, 
+      numbers: [], 
+      modalIsOpen: false
+    };
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount() {
@@ -20,6 +41,18 @@ class Demo extends React.Component {
 
   handleNewNumber(){
     this.animate();
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true });
+  }
+
+  afterOpenModal() {
+    this.subtitle.style.color = '#f00';
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
   }
 
   animate(){
@@ -96,6 +129,21 @@ class Demo extends React.Component {
             <a onClick={this.handleReset}>Reset</a>
             <div className="demo-divider"></div>
             <a id="new-num" onClick={this.handleNewNumber}>Find a New Number!</a>
+            <div className="demo-divider"></div>
+            <a id="new-num" onClick={this.openModal}>Confused? Click Here</a>
+            <Modal
+              isOpen={this.state.modalIsOpen}
+              onAfterOpen={this.afterOpenModal}
+              onRequestClose={this.closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
+            >
+              <div className="modal-close-div">
+                <button className="modal-close" onClick={this.closeModal}>close</button>
+              </div>
+              <h2 ref={subtitle => this.subtitle = subtitle}>INSTRUCTIONS</h2>
+              <p>Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you're feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".</p>
+            </Modal>
           </div>
           <div className="demo-container"><NumberSet ref="child" parent={this} /></div>
         </div>

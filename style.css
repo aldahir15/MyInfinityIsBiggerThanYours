@@ -173,7 +173,7 @@ h1 {
 }
 
 .demo-divider {
-  width: 20%;
+  width: 15%;
 }
 
 .demo-input-div {
@@ -314,4 +314,16 @@ line {
 
 img {
   display: none;
+}
+
+
+.modal-close {
+  justify-content: right;
+}
+
+.modal-close-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 0px;  
 }
