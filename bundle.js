@@ -47898,7 +47898,7 @@ var customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     color: 'black',
-    width: '70%'
+    width: '80%'
   }
 };
 
@@ -48084,9 +48084,36 @@ var Demo = function (_React$Component) {
                   'INSTRUCTIONS'
                 ),
                 _react2.default.createElement(
-                  'p',
-                  null,
-                  'Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you\'re feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".'
+                  'div',
+                  { className: 'vertical-instructions-div' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'vertical-instruction' },
+                    _react2.default.createElement(
+                      'h4',
+                      null,
+                      'MANUALLY'
+                    ),
+                    _react2.default.createElement(
+                      'p',
+                      null,
+                      'Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you\'re feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'vertical-instruction2' },
+                    _react2.default.createElement(
+                      'h4',
+                      null,
+                      'AUTOMATIC'
+                    ),
+                    _react2.default.createElement(
+                      'p',
+                      null,
+                      'Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you\'re feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".'
+                    )
+                  )
                 )
               )
             ),

@@ -15,7 +15,7 @@ const customStyles = {
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
     color                 : 'black',
-    width                 : '70%'
+    width                 : '80%'
   }
 };
 
@@ -142,7 +142,16 @@ class Demo extends React.Component {
                 <button className="modal-close" onClick={this.closeModal}>close</button>
               </div>
               <h2 ref={subtitle => this.subtitle = subtitle}>INSTRUCTIONS</h2>
-              <p>Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you're feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".</p>
+              <div className="vertical-instructions-div">
+                <div className="vertical-instruction">
+                  <h4>MANUALLY</h4>
+                  <p>Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you're feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".</p>
+                </div>
+                <div className="vertical-instruction2">
+                  <h4>AUTOMATIC</h4>
+                  <p>Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you're feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".</p>
+                </div>
+              </div>
             </Modal>
           </div>
           <div className="demo-container"><NumberSet ref="child" parent={this} /></div>

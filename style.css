@@ -327,3 +327,18 @@ img {
   justify-content: flex-end;
   height: 0px;  
 }
+
+.vertical-instructions-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-instruction {
+  width: 50%;
+}
+
+.vertical-instruction2 {
+  width: 50%;
+  border-left: thick solid black;    
+  padding-left: 10px;
+}
