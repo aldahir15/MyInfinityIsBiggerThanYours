@@ -47898,7 +47898,7 @@ var customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     color: 'black',
-    width: '80%'
+    width: '90%'
   }
 };
 
@@ -48020,11 +48020,6 @@ var Demo = function (_React$Component) {
         'div',
         { className: 'first-wrap' },
         _react2.default.createElement(
-          'p',
-          { className: 'p-wrap' },
-          'INSTRUCTIONS: Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you\'re feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".'
-        ),
-        _react2.default.createElement(
           'div',
           { className: 'wrap-wrap' },
           _react2.default.createElement(
@@ -48097,8 +48092,9 @@ var Demo = function (_React$Component) {
                     _react2.default.createElement(
                       'p',
                       null,
-                      'Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you\'re feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".'
-                    )
+                      'Start by inputting in a number and pressing enter to make more, when you want to find a new number click "FIND A NEW NUMBER". If you want to reset the set click on "RESET".'
+                    ),
+                    _react2.default.createElement('img', { className: 'image-help', src: "https://thumbs.gfycat.com/DimAdoredFinwhale-size_restricted.gif" })
                   ),
                   _react2.default.createElement(
                     'div',
@@ -48111,8 +48107,9 @@ var Demo = function (_React$Component) {
                     _react2.default.createElement(
                       'p',
                       null,
-                      'Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you\'re feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".'
-                    )
+                      'If you\'re feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER" to get a random set populated which you can modify and keep on adding onto.'
+                    ),
+                    _react2.default.createElement('img', { className: 'image-help', src: "https://thumbs.gfycat.com/UnevenSorrowfulClumber-size_restricted.gif" })
                   )
                 )
               )

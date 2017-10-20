@@ -15,7 +15,7 @@ const customStyles = {
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
     color                 : 'black',
-    width                 : '80%'
+    width                 : '90%'
   }
 };
 
@@ -118,9 +118,6 @@ class Demo extends React.Component {
   render() {
     return (
       <div className="first-wrap">
-      <p className="p-wrap">INSTRUCTIONS: Start by inputting in a number and pressing enter to make more, when you want to find a new
-        number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you're feeling
-        lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".</p>
       <div className="wrap-wrap">
         <div className="wrap">
           <div className="demo-button-div">
@@ -145,11 +142,13 @@ class Demo extends React.Component {
               <div className="vertical-instructions-div">
                 <div className="vertical-instruction">
                   <h4>MANUALLY</h4>
-                  <p>Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you're feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".</p>
+                  <p>Start by inputting in a number and pressing enter to make more, when you want to find a new number click "FIND A NEW NUMBER". If you want to reset the set click on "RESET".</p>
+                  <img className="image-help" src={"https://thumbs.gfycat.com/DimAdoredFinwhale-size_restricted.gif"}/>
                 </div>
                 <div className="vertical-instruction2">
                   <h4>AUTOMATIC</h4>
-                  <p>Start by inputting in a number and pressing enter to make more, when you want to find a new number click on "FIND A NEW NUMBER" and if you want to rest the set click on "RESET". If you're feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER".</p>
+                  <p>If you're feeling lazy click on "RANDOM SET" and then on "FIND A NEW NUMBER" to get a random set populated which you can modify and keep on adding onto.</p>
+                  <img className="image-help" src={"https://thumbs.gfycat.com/UnevenSorrowfulClumber-size_restricted.gif"} />
                 </div>
               </div>
             </Modal>
