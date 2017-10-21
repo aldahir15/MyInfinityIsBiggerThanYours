@@ -136,9 +136,7 @@ class Demo extends React.Component {
               style={customStyles}
               contentLabel="Example Modal"
             >
-              <div className="modal-close-div">
-                <button className="modal-close" onClick={this.closeModal}>close</button>
-              </div>
+
               <h2 ref={subtitle => this.subtitle = subtitle}>INSTRUCTIONS</h2>
               <div className="vertical-instructions-div">
                 <div className="vertical-instruction">

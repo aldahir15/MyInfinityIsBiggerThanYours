@@ -48065,15 +48065,6 @@ var Demo = function (_React$Component) {
                   contentLabel: 'Example Modal'
                 },
                 _react2.default.createElement(
-                  'div',
-                  { className: 'modal-close-div' },
-                  _react2.default.createElement(
-                    'button',
-                    { className: 'modal-close', onClick: this.closeModal },
-                    'close'
-                  )
-                ),
-                _react2.default.createElement(
                   'h2',
                   { ref: function ref(subtitle) {
                       return _this3.subtitle = subtitle;
