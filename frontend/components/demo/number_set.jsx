@@ -51,7 +51,14 @@ class Demo extends React.Component {
   }
 
   handleRandom(){
-    const SET = [0.1234567897, 0.863528176, 0.9876543210, 0.54273652342, 0.832742397821, 0.938742349872];
+    let SET = [];
+    for (var i = 0; i < 10; i++) {
+      console.log("IM HEREEEEEEEEE");
+      const val = Math.random() * (0.920 - 0.100) + 0.100;
+      SET.push(val);
+    }
+    console.log("SETTTTTTTTT", SET);
+    // const SET = [0.1234567897, 0.863528176, 0.9876543210, 0.54273652342, 0.832742397821, 0.938742349872];
     // this.setState({numbers: SET});
     this.setState({inputs: []});
     for (var i = 0; i < SET.length + 1; i++) {
